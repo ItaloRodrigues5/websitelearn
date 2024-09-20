@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+body{
+    background-color: #2d0043;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+h1{
+    color: #AA8A00;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+h1#principal{
+    text-align: center;
+    font-size: 4em;
+}
+
+#htmltitulo{
+    color: orangered;
+}
+
+#csstitulo{
+    color: rgb(53, 53, 255);
+}
+
+.titulos{
+    background-color: #aa8b005b;
+}
+
+h2{
+    color: #d2691e;
+    font-size: 2em;
+}
+
+p{
+    color: #ffffff;
+    font-weight: normal;
+}
+
+h2.basico{
+    color: green;
+}
+
+h2.intermediario{
+    color: yellow;
+}
+
+h2.avancado{
+    color: red;
+}
+
+/*Pode colocar sem identificar qual o elemento percente o ID ou CLASS, porém será qualquer elemento que possuir esse mesmo ID ou CLASS.
+TUDO EM HTML É ID = EM CSS É #
+TUDO EM HTML É CLASS = EM CSS É .
+*/

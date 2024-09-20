@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: gray;
+            margin: 0px;
+        }
+        header{
+            background-color: white;
+            padding: 25px 0px;
+            margin: 0px auto 10px auto;
+            text-align: left;
+            width: 100%;
+            border-radius: 0px 0px 10px 10px;
+        }
+        
+        header > h1{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 16px 0px 20px 8px;
+        }
+
+        nav{
+            text-align: left;
+            background-color: rgba(40, 40, 40, 0.782);
+            padding: 3px;
+            box-shadow: 5px 3px 7px 1px rgba(0, 0, 0, 0.602);
+            border-radius: 0px 0px 0px 0px;
+
+            /*
+            Ordem do box-shadow
+
+            Deslocamento horizontal
+            Deslocamento Vertical
+            Espalhamento
+            Alcance
+            Cor
+            */
+        }
+        nav > a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin: 1px 20px;
+        }
+
+        nav > a:focus{
+            color: black;
+            font-weight: bold;
+        }
+
+        nav > a:hover{
+            color: rgb(142, 142, 142);
+        }
+
+        main{
+            background-color: white;
+            padding: 10px 10px;
+            margin: 5px 10px 5px 10px;
+            width: auto;
+            height: 450px;
+            border-radius: 0px 20px;
+            box-shadow: 4px 1px 7px 1px rgba(0, 0, 0, 0.557);
+        }
+        
+        article{
+            background-color: lightgray;
+            padding: 1px 5px;
+        }
+
+        article > h2{
+            padding: 0px;
+            margin: 16px auto;
+        }
+
+        article > p{
+            text-align: justify;
+            padding: 0px;
+            margin: 5px 2px;
+        }
+
+        article > aside{
+            background-color: rgb(38, 36, 36);
+            color: white;
+            width: 225px;
+        }
+
+        footer{
+            background-color: rgb(18, 18, 18);
+            color: white;
+            text-align: center;
+            padding: 10px 0px;
+            margin: 5px auto;
+            width: 100%;
+            height: auto;
+        }
+        
+        footer > p{
+            margin: 0px;
+            font-weight: bold;
+        }
+
+        div#bola{
+            background-color: white;
+            height: 100px;
+            width: 100px;
+            margin: 15px auto;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Honkai: Star Rail Characters Mains</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="assuntos">
+            <p>Esportes Política Tecnologia</p>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>noticias ae</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis sint accusantium saepe quibusdam explicabo culpa eaque velit non natus quasi perspiciatis ex ipsum, facilis autem blanditiis sunt? At, sapiente quis! Lorem ipsum dolor sit amet consectetur, adipisicing elit. At repellat iste fugiat vel modi reprehenderit necessitatibus debitis maxime autem repellendus? Corrupti veniam rerum dolores iste sequi quo blanditiis delectus ipsam!</p>
+                <aside>
+                    Artigo escrito por xuxa da silva
+                </aside>
+            </article>
+            <article>
+                <h2>noticias ae</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium minima deserunt dolor maxime ratione in expedita impedit possimus a, omnis, esse necessitatibus nobis nisi hic voluptatem iusto cupiditate quidem! Ullam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aliquam ut, atque tempore deleniti reiciendis asperiores quia quo cupiditate laudantium sequi cumque, odio possimus quaerat exercitationem quasi illum pariatur officia.</p>
+                <aside>
+                    Artigo escrito por xaxa silva
+                </aside>
+            </article>
+        </section>
+    </main>
+        
+    <footer>
+        <p>Criado por xuxa</p>
+    </footer>
+
+
+    <div id="bola"></div>
+</body>
+</html>
