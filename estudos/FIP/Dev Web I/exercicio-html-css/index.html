@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto de site utilizando HTML e CSS avançado.">
+    <title>Meu Site Pessoal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="assets/FwuwHzRXwAMRs2m.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Meu Site</h1>
+            <ul class="menu">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Principal -->
+    <main>
+        <section class="hero section-height">
+            <h2>Bem-vindo ao Meu Site</h2>
+            <p>Este é um projeto HTML + CSS para prática.</p>
+            <button class="btn">Saiba Mais</button>
+        </section>
+
+        <!-- Sobre -->
+        <section id="sobre" class="sobre section-height">
+            <h2>Sobre Mim</h2>
+            <p>Sou um desenvolvedor apaixonado por tecnologia e design responsivo. <br> Construo projetos em várias linguagens oficialmente desde 2021.<br>Atualmente estou estudando Python e Django.<br>Minha meta é construir conhecimento ao longo da carreira.</p>
+            <img src="assets/FwuwHzRXwAMRs2m.jpg" alt="Aquamarine Hoshino, conhecido como Aqua tomando um café em uma caneca.">
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos" class="projetos">
+            <h2>Meus Projetos</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Pequenos Desafios</h3>
+                    <p id="paragrafo-de-projeto"> Projeto realizado na UNIFIP dedicado a ser um site educacional com jogos infantis para aprendizado.<br>Link de acesso ao repositório no Github: <a href="https://github.com/ItaloRodrigues5/pequenosdesafios" target="_blank">Repositório</a></p>
+                    <img src="assets/projetos/pequenosdesafios.png" alt="Imagem da página inicial do projeto Pequenos Desafios">
+                </div>
+                <div class="card">
+                    <h3>Honkai: Star Rail Guide</h3>
+                    <p id="paragrafo-de-projeto">Projeto pessoal realizado dedicado a aprendizagem e desenvolvimento de sites responsivos e sobre o conteúdo.<br>Link de acesso ao repositório no Github: <a href="https://github.com/ItaloRodrigues5/Honkai-Star-Rail-Guide" target="_blank">Repositório.</a></p>
+                    <img src="assets/projetos/honkai-star-rail-guide.png" alt="Imagem da de uma das páginas do projeto Honkai: Star Rail Guide">
+                    
+                </div>
+                <div class="card">
+                    <h3>Sinte Informátivo Kage no Jitsuryokusha ni Naritakute!</h3>
+                    <p id="paragrafo-de-projeto">Projeto pessoal realizado dedidaco a aprendizagem e desenvolvimento de sites responsivos e sobre o conteúdo da página.<br> Link de acesso ao repositório no Github: <a href="https://github.com/ItaloRodrigues5/siteinformativo-shadow-kjn" target="_blank">Repositório</a></p>
+                    <img src="assets/projetos/shadow-kjn-square.png" alt="Imagem da página do projeto Site Informativo Kage no Jitsuryokusha ni Naritakute!">
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Contato -->
+    <section id="contato" class="contato section-height">
+        <h2>Contato</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Plugin VLibras para acessibilidade -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget();</script>
+</body>
+</html>
