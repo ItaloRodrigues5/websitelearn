@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+p {
+  font-size: 18px;
+  color: black;
+  font-weight: bold; /* ADICIONADO */
+}
+
+.destacado {
+  font-weight: bold;
+  color: red;
+}
+
+/* INPUT ADICIONADO */
+input{
+  font-size: 1.2em;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px; /* ADICIONADO */
+}
+
+.oculto {
+  display: none;
+}
