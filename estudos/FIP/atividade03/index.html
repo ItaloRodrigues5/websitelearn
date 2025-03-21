@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Formulário</h2>
+    <form>
+        <div class="form-row">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome">
+        </div>
+
+        <div class="form-row">
+            <label for="data_nascimento">Data Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento">
+        </div>
+
+        <div class="form-row">
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" placeholder="Seu endereço">
+        </div>
+
+        <div class="form-row">
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" name="numero" placeholder="Número da sua residência">
+        </div>
+
+        <div class="form-row">
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Sua cidade">
+        </div>
+
+        <div class="form-row">
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado">
+                <option value="">Selecione um estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+        </div>
+
+        <div class="form-row">
+            <label>Bens Pessoais:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="casa" name="bens_pessoais" value="casa">
+                <label for="casa">Casa</label>
+
+                <input type="checkbox" id="carro" name="bens_pessoais" value="carro">
+                <label for="carro">Carro</label>
+
+                <input type="checkbox" id="moto" name="bens_pessoais" value="moto">
+                <label for="moto">Moto</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="experiencias">Experiências Pessoais:</label>
+            <textarea id="experiencias" name="experiencias" rows="4" placeholder="Experiências Pessoais"></textarea>
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="submit">Enviar</button>
+            <button type="reset" class="clear">Limpar</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

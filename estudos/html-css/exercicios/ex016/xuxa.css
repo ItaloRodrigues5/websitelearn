@@ -1,0 +1,33 @@
+@charset "uft-8";
+
+*{
+    font-family: sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right, purple, violet);
+}
+
+main{
+    background-color: white;
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(60, 0, 60, 0.642);
+    
+}
+
+h1{
+    color: purple;
+    text-align: center;
+    text-shadow: 1px 1px 0px rgba(60, 0, 60, 0.642);
+}
+
+h2{
+    color: purple;
+}
+
+p{
+    text-align: justify;
+}

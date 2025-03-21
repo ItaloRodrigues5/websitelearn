@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links ae</title>
+</head>
+    <style>
+
+        /* SELETORES PERSONALIZADOS
+            # = id
+            . = class
+            : = pseudoclass
+            :: = pseudoelement
+            > = children
+        */
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a{
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited{
+            color: darkred;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: black;
+        }
+        a:active{
+            color: blue;
+        }
+
+        a.especial{
+            background-color: rgba(144, 22, 22, 0.475);
+            color: white;
+        }
+        a.especial::before{
+            content: '☭ ';
+        }
+        a::after{
+            content: ' (link)';
+            text-decoration: none;
+            font-weight: normal;
+            color: blue;
+        }
+    </style>
+<body>
+    <h1>Personalizando Links</h1>
+
+    <ul>
+        <li><a href="https://animefire.plus/" target="_blank" rel="external" class="especial">Página do Anime Fire</a></li>
+        <li><a href="https://animefire.plus/animes/kage-no-jitsuryokusha-ni-naritakute-todos-os-episodios" target="_blank" rel="external">Temporada 1 de Kage no Jitsuryokusha</a></li>
+        <li><a href="https://animefire.plus/animes/kage-no-jitsuryokusha-ni-naritakute-2nd-season-todos-os-episodios" target="_blank" rel="external">Temporada 2 de Kage no Jitsuryokusha</a></li>
+    </ul>
+</body>
+</html>
