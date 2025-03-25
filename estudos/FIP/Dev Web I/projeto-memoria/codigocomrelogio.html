@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container mt-4 text-center">
+      <h1>Jogo da Memória</h1>
+      <div id="game-board" class="d-flex flex-wrap justify-content-center"></div>
+      <p>Pontuação: <span id="score">0</span></p>
+      <p>Tempo: <span id="timer">0</span>s</p>
+    </div>
+
+    <div class="clock-container text-center mt-5">
+      <div class="clock">
+        <div class="marks"></div>
+        <div class="hand hour-hand"></div>
+        <div class="hand minute-hand"></div>
+        <div class="hand second-hand"></div>
+        <div class="center-circle"></div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center p-4 mt-5">
+      <p>&copy; 2025 Jogo da Memória. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/game.js"></script>
+    <script>
+      let gameTime = 0;
+      function updateClock() {
+        const now = new Date();
+        const hours = now.getHours() % 12;
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+
+        const hourDeg = (hours + minutes / 60) * 30;
+        const minuteDeg = (minutes + seconds / 60) * 6;
+        const secondDeg = seconds * 6;
+
+        document.querySelector(".hour-hand").style.transform = `rotate(${hourDeg}deg)`;
+        document.querySelector(".minute-hand").style.transform = `rotate(${minuteDeg}deg)`;
+        document.querySelector(".second-hand").style.transform = `rotate(${secondDeg}deg)`;
+      }
+
+      function updateGameTime() {
+        document.getElementById("timer").textContent = gameTime;
+        gameTime++;
+      }
+
+      function createClockMarks() {
+        const marksContainer = document.querySelector(".marks");
+        for (let i = 0; i < 12; i++) {
+          const mark = document.createElement("div");
+          mark.classList.add("mark");
+          mark.style.transform = `rotate(${i * 30}deg) translate(65px)`;
+          marksContainer.appendChild(mark);
+        }
+      }
+
+      setInterval(updateClock, 1000);
+      setInterval(updateGameTime, 1000);
+      updateClock();
+      createClockMarks();
+    </script>
+
+    <style>
+      .clock-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .clock {
+        width: 150px;
+        height: 150px;
+        border: 5px solid black;
+        border-radius: 50%;
+        position: relative;
+      }
+      .marks {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .mark {
+        position: absolute;
+        width: 3px;
+        height: 10px;
+        background: black;
+      }
+      .hand {
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform-origin: bottom;
+        background: black;
+      }
+      .hour-hand {
+        width: 6px;
+        height: 40px;
+      }
+      .minute-hand {
+        width: 4px;
+        height: 50px;
+      }
+      .second-hand {
+        width: 2px;
+        height: 60px;
+        background: red;
+      }
+      .center-circle {
+        width: 10px;
+        height: 10px;
+        background: black;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </body>
+</html>
