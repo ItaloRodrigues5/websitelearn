@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        .game-container {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            gap: 10px;
+            justify-content: center;
+            margin: 20px auto;
+        }
+        .card {
+            width: 100px;
+            height: 100px;
+            background-color: #6c757d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            transform: rotateY(0deg);
+            transition: transform 0.5s, background-color 0.3s;
+            border-radius: 8px;
+        }
+        .flipped {
+            background-color: white;
+            color: black;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="container mt-4">
+    <h1 class="mb-3">Jogo da Memória</h1>
+    <p class="fw-bold">Pontuação: <span id="score">0</span></p>
+    <p class="fw-bold">Tempo: <span id="timer">0</span> segundos</p>
+    <div class="game-container" id="gameBoard"></div>
+    
+    <script>
+        const images = [
+            "img/dog.png", "img/cat.png", "img/rabbit.png", "img/fox.png",
+            "img/panda.png", "img/bear.png", "img/frog.png", "img/monkey.png"
+        ];
+        let cards = [...images, ...images];
+        let firstCard = null;
+        let secondCard = null;
+        let score = 0;
+        let matches = 0;
+        let time = 0;
+        let timer;
+
+        function startTimer() {
+            timer = setInterval(() => {
+                time++;
+                document.getElementById("timer").textContent = time;
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timer);
+        }
+
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        function createBoard() {
+            cards = shuffle(cards);
+            const board = document.getElementById("gameBoard");
+            board.innerHTML = "";
+            cards.forEach((image, index) => {
+                const card = document.createElement("div");
+                card.classList.add("card");
+                card.dataset.image = image;
+                card.dataset.index = index;
+                card.addEventListener("click", flipCard);
+                board.appendChild(card);
+            });
+            startTimer();
+        }
+
+        function flipCard() {
+            if (this === firstCard || this.classList.contains("flipped")) return;
+            this.classList.add("flipped");
+            this.style.backgroundImage = `url(${this.dataset.image})`;
+            this.style.backgroundSize = "cover";
+            this.style.backgroundPosition = "center";
+
+            if (!firstCard) {
+                firstCard = this;
+                return;
+            }
+
+            secondCard = this;
+            checkMatch();
+        }
+
+        function checkMatch() {
+            if (firstCard.dataset.image === secondCard.dataset.image) {
+                score += 10;
+                matches++;
+                firstCard = null;
+                secondCard = null;
+                document.getElementById("score").textContent = score;
+
+                if (matches === images.length) {
+                    stopTimer();
+                    alert(`Parabéns! Você completou o jogo em ${time} segundos!`);
+                }
+            } else {
+                setTimeout(() => {
+                    firstCard.classList.remove("flipped");
+                    secondCard.classList.remove("flipped");
+                    firstCard.style.backgroundImage = "";
+                    secondCard.style.backgroundImage = "";
+                    firstCard = null;
+                    secondCard = null;
+                }, 1000);
+            }
+        }
+
+        createBoard();
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

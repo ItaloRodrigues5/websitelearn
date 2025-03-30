@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700 display=swap');
 
 :root{
-    --background: #A145C2;
+    --background-nav: #A145C2;
+    --background: #5DC0EB;
 
     --fontecomic: "Comic Neue", cursive;
 }
 
 .navbar{
-    background-color: var(--background);
+    background-color: var(--background-nav);
 }
 
 .nav-item:hover{
@@ -21,4 +22,32 @@
     font-family: var(--fontecomic);
     font-weight: 300;
     font-style: normal;
+    background-color: var(--background);
+}
+
+.game-container{
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+    height: 500px;
+}
+
+.card{
+    width: 100px;
+    height: 100px;
+    background-color: #6c757d;
+    background-image: url("../media/memoria/back-control.png");
+    transform-style: preserve-3d;
+    background-size: cover;
+    background-position: relative;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.flipped{
+    color: black;
+    border: 5px solid black;
+    transform: rotateY(180deg);
 }
