@@ -1,7 +1,7 @@
 const images = [
-    "../media/memoria/cachorro.png", "../media/memoria/elefante.png",
-    "../media/memoria/leão.png", "../media/memoria/numero1.png",
-    "../media/memoria/numero2.png", "../media/memoria/numero3.png"
+    "./media/memoria/cachorro.png", "./media/memoria/elefante.png",
+    "./media/memoria/leão.png", "./media/memoria/numero1.png",
+    "./media/memoria/numero2.png", "./media/memoria/numero3.png"
 ];
 
 let cards = [...images, ...images];
