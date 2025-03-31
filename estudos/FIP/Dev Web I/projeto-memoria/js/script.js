@@ -83,6 +83,11 @@ function createBoard(){
     startTimer();
 }
 
+document.getElementById("resetBtn").addEventListener("click", function(){
+    location.reload();
+});
+
 document.addEventListener("DOMContentLoaded", function() {
     createBoard();
 });
+

@@ -13,11 +13,11 @@
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a href="#" class="navbar-brand fs-2 fw-bold text-white">Jogo da Memória - Pequenos Desafios</a>
-                <button class="navbar-toggler collapsed" type="button" data-bs-target="#navbar" aria-expanded="false">
+                <a href="#" class="navbar-brand fs-2 fw-bold text-white text-wrap">Jogo da Memória - Pequenos Desafios</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse">
+                  </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a href="#"  class="nav-link text-white fs-5 fw-bold">Início</a></li>
                         <li class="nav-item"><a href="#" class="nav-link text-white fs-5 fw-bold">Sobre</a></li>
@@ -34,6 +34,10 @@
         <p class="fw-bold text-center fs-5">Tempo: <span id="timer">0</span> segundos</p>
         
         <div class="game-container" id="memorygame"></div>
+
+        <div class="d-flex justify-content-center align-items-center">
+            <button id="resetBtn" class="btn btn-warning text-white">Reiniciar</button>
+        </div>
     </main>
     
     <footer class="text-center mt-5">
